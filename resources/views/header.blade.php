@@ -20,6 +20,15 @@
         <i class="gift icon"></i>
         Items
     </a>
+    <div class="right menu">
+        <i class="item">Balance: <br/> kreditszámot ide pls</i>
+        <a class="item">
+            <i class="sign-out icon"></i>
+            Log out
+
+        </a>
+    </div>
 </div>
+
 
 <div class="ui raised very padded text container segment">
