@@ -80,11 +80,12 @@
 
                         </div>
 
-                        </form>
+
                         <div class="actions">
                             <button class="ui positive button">Gift it!</button>
                             <div class="ui cancel button">Cancel</div>
                         </div>
+                        </form>
                     </div>
 
                 @else
