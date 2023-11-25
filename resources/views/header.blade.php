@@ -16,5 +16,10 @@
         <i class="user icon"></i>
         Profile
     </a>
+    <a class="item <?=str_contains(Route::current()->uri, "items") ? 'active' : ''?>" href="/items">
+        <i class="gift icon"></i>
+        Items
+    </a>
 </div>
 
+<div class="ui raised very padded text container segment">

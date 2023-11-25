@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Models\Transaction;
-use Illuminate\Database\Eloquent\Collection;
 
 class TransactionController extends Controller
 {
