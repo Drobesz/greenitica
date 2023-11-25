@@ -1,3 +1,4 @@
+<link rel="stylesheet" type="text/css" href="app.css">
 <link rel="stylesheet" type="text/css" href="semantic.css">
 <script
     src="https://code.jquery.com/jquery-3.1.1.min.js"
@@ -29,6 +30,10 @@
         </a>
     </div>
 </div>
-
+<style>
+    .label {
+        width: 150px !important;
+    }    
+</style>
 
 <div class="ui center aligned text container raised">
