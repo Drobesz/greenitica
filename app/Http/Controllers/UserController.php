@@ -34,10 +34,10 @@ class UserController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(User $user, Request $request)
     {
-        $user = User::findOrFail(1);
-        $user->fill($request)->save();
+        $user->name = $request->get('name');
+        $user->email = $request->get('email');
         $user->save();
         return back()->with('message', 'Profile Successfully Updated!');
     }
