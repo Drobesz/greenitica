@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Item extends Model
 {
     use HasFactory;
+
+    public function partner()
+    {
+        return $this->belongsTo(Partner::class);
+    }
 }
