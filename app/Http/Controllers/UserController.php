@@ -12,7 +12,7 @@ class UserController extends Controller
      */
     public function index()
     {
-        return view('profile', User::findOrFail(1));
+        return view('profile', ['user' => User::findOrFail(1)]);
     }
 
     /**
