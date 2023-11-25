@@ -8,7 +8,7 @@
             labels: labels,
             datasets: [{
                 label: 'Carbon points',
-                data: [@foreach ($transactions as $transaction) {{$transaction->amount}},@endforeach],
+                data: [@foreach ($transactions as $transaction) {{$transaction->carbon_token}},@endforeach],
                 fill: false,
                 borderColor: 'rgb(75, 192, 192)',
                 tension: 0.1
@@ -40,10 +40,10 @@
 <table class="ui celled table">
     <thead>
     <tr>
-        <th>Dátum</th>
-        <th>Partner neve</th>
-        <th>Összeg</th>
-        <th>Karbon pontok</th>
+        <th>Date</th>
+        <th>Merchant</th>
+        <th>Spent Amount</th>
+        <th>Gained Carbon Credits</th>
     </tr>
     </thead>
     <tbody>
@@ -52,7 +52,7 @@
             <td>{{$transaction->date}}</td>
             <td>{{$transaction->partner->name}}</td>
             <td>{{$transaction->amount}}</td>
-            <td>{{$transaction->carbon_token}}</td>
+            <td><b>{{$transaction->carbon_token}}</b></td>
         </tr>
     @endforeach
     </tbody>
