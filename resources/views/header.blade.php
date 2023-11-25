@@ -1,3 +1,6 @@
+<?php
+    use App\Models\User;
+?>
 <link rel="stylesheet" type="text/css" href="app.css">
 <link rel="stylesheet" type="text/css" href="semantic.css">
 <script
@@ -28,7 +31,7 @@
         My Items
     </a>
     <div class="right menu">
-        <i class="item">Balance: <br/>        <i class="money icon"></i> </i>
+        <i class="item">Balance: <br/>        <i class="money icon"></i> {{User::findOrFail(1)->balance}} </i>
         <a class="item">
             <i class="sign-out icon"></i>
             Log out
