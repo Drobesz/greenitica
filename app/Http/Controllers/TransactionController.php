@@ -10,9 +10,12 @@ class TransactionController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index(): Collection
+    public function index()
     {
-        return Transaction::with('partner')->get();
+        return view(
+            'transactions',
+            ['transactions'=>Transaction::with('partner')->get()]
+        );
     }
 
     /**
