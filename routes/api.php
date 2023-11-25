@@ -3,6 +3,7 @@
 use App\Http\Controllers\ItemController;
 use App\Http\Controllers\PartnerController;
 use App\Http\Controllers\TransactionController;
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\UserItemController;
 use Illuminate\Support\Facades\Route;
 
@@ -21,3 +22,4 @@ Route::apiResource('partners', PartnerController::class);
 Route::apiResource('transactions', TransactionController::class);
 Route::apiResource('items', ItemController::class);
 Route::apiResource('useritems', UserItemController::class);
+Route::apiResource('users', UserController::class);
