@@ -54,11 +54,39 @@
                             </button>
                         </form>
                         <div class="or"></div>
-                        <button class="ui positive button">
+                        <button class="ui positive button" onclick="$('.mini.modal').modal('show');">
                             <i class="gift icon"></i>
                             Gift
                         </button>
                     </div>
+
+                    <div class="ui mini modal" style="display:none;">
+                        <div class="header">Which friend do you want to gift?</div>
+                        <form method="POST" action="useritems">
+                            @csrf
+                            <input type="hidden" name="item_id" value="{{$item->id}}">
+                            <input type="hidden" name="from_user_id" value="{{$user->id}}">
+                            <select name="recipient_user_id" class="ui fluid dropdown">
+                                @foreach($users as $user2)
+                                    @if ($user2->id != $user->id)
+                                        <option value="{{$user2->id}}">{{$user2->name}} ({{$user2->email}})</option>
+                                    @endif
+                                @endforeach
+                            </select>
+                            <input type="hidden" name="is_redeemed" value="0">
+                            <input type="hidden" name="is_gifted" value="0">
+                            <input type="hidden" name="qr_code" value="">
+                        <div class="content">
+
+                        </div>
+
+                        </form>
+                        <div class="actions">
+                            <button class="ui positive button">Gift it!</button>
+                            <div class="ui cancel button">Cancel</div>
+                        </div>
+                    </div>
+
                 @else
                     <div class="ui red message"><i class="x icon"></i> Not enough carbon credits.</div>
                 @endif

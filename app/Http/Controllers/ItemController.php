@@ -16,7 +16,7 @@ class ItemController extends Controller
     {
         return view(
             'item',
-            ['items' => Item::with('partner')->get(), 'user' => User::findOrFail(1)]
+            ['items' => Item::with('partner')->get(), 'user' => User::findOrFail(1), 'users' => User::get()]
         );
     }
 

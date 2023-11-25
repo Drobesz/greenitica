@@ -14,7 +14,9 @@ class UserItemController extends Controller
      */
     public function index()
     {
-        return view('useritems',['userItems' => UserItem::with(['item', 'fromuser','recipientuser'])->get()]);
+        return view('useritems', [
+            'userItems' => UserItem::with(['item', 'fromuser', 'recipientuser'])->get(),
+        ]);
     }
 
     /**

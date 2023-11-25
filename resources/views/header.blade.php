@@ -7,7 +7,9 @@
 <script src="semantic.js"></script>
 <div class="ui labeled icon menu">
     <div class="header item">
-        Greenitica
+        <a href="/transactions">
+            <img class="ui image" src="images/logo.jpg" width="64">
+        </a>
     </div>
     <a class="item <?=str_contains(Route::current()->uri, "transactions") ? 'active' : ''?>" href="/transactions">
         <i class="list icon "></i>
