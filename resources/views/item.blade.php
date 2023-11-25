@@ -13,7 +13,7 @@
     </div>
 @endif
 
-<div class="ui special cards">
+<div class="ui special cards centered">
     @foreach($items as $item)
         <div class="card">
             <div class="blurring dimmable image">
@@ -22,7 +22,7 @@
 
                     </div>
                 </div>
-                <img src="/images/elliot.png">
+                <img src="{{$item->image}}">
             </div>
             <div class="content">
                 <a class="header"><?= $item->name ?></a>
@@ -33,7 +33,7 @@
             <div class="extra content">
                 <span>
                     <i class="money icon"></i>
-                    <?= $item->price ?> karbon kredit
+                    <?= $item->price ?> carbon credit
                 </span>
             </div>
             <div class="extra content center aligned">
@@ -54,13 +54,13 @@
                             </button>
                         </form>
                         <div class="or"></div>
-                        <button class="ui positive button" onclick="$('.mini.modal').modal('show');">
+                        <button class="ui positive button" onclick="$('.modal.modal.mid{{$item->id}}').modal('show');">
                             <i class="gift icon"></i>
                             Gift
                         </button>
                     </div>
 
-                    <div class="ui mini modal" style="display:none;">
+                    <div class="ui mini modal mid{{$item->id}}" style="display:none;">
                         <div class="header">Which friend do you want to gift?</div>
                         <form method="POST" action="useritems">
                             @csrf

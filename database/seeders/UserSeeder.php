@@ -17,7 +17,7 @@ class UserSeeder extends Seeder
             [
                 [
                     'name' => 'Pista Nagy',
-                    'balance' => 5000,
+                    'balance' => 50000,
                     'email' => 'nagy.pista@greenitica.local'
                 ],
                 [

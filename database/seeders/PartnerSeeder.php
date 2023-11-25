@@ -17,35 +17,35 @@ class PartnerSeeder extends Seeder
             [
                 [
                     'id' => 1,
-                    'name' => 'VKB',
+                    'name' => 'BKK',
                     'is_elevated' => true,
                     'percentage' => 0.06,
                     'image' => ''
                 ],
                 [
                     'id' => 2,
-                    'name' => 'SISOA',
+                    'name' => 'Oasis Gardening',
                     'is_elevated' => true,
                     'percentage' => 0.05,
                     'image' => ''
                 ],
                 [
                     'id' => 3,
-                    'name' => 'RAPS',
+                    'name' => 'SPAR',
                     'is_elevated' => false,
                     'percentage' => 0.04,
                     'image' => ''
                 ],
                 [
                     'id' => 4,
-                    'name' => 'ABC',
+                    'name' => 'CBA',
                     'is_elevated' => false,
                     'percentage' => 0.04,
                     'image' => ''
                 ],
                 [
                     'id' => 5,
-                    'name' => 'TRINARG',
+                    'name' => 'Granit bank',
                     'is_elevated' => false,
                     'percentage' => 0.04,
                     'image' => ''

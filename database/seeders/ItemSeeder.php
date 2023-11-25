@@ -16,38 +16,38 @@ class ItemSeeder extends Seeder
         DB::table('items')->insert([
             [
                 "id" => 1,
-                "name" => "monthly budapest pass for pupils from VKB",
+                "name" => "Monthly Budapest pass",
                 "partner_id" => 1,
                 "price" => 12500,
-                "image" => ""
+                "image" => "images/bkklogo.jpg"
             ],
             [
                 "id" => 2,
-                "name" => "voucher for butchery in RAPS",
+                "name" => "Voucher for butchery",
                 "partner_id" => 3,
                 "price" => 1000,
-                "image" => ""
+                "image" => "images/sparlogo.png"
             ],
             [
                 "id" => 3,
-                "name" => "no account management fee for 6 months at TRINARG",
+                "name" => "No account management fee for 6 months",
                 "partner_id" => 5,
                 "price" => 20000,
                 "image" => ""
             ],
             [
                 "id" => 4,
-                "name" => "free birsch sapling from SISOA Gardening",
+                "name" => "Free birch sapling",
                 "partner_id" => 2,
                 "price" => 5000,
-                "image" => ""
+                "image" => "images/oasislogo.jpg"
             ],
             [
                 "id" => 5,
-                "name" => "Free breakfast menu at RASP Cafeteria",
-                "price" => 8000,
+                "name" => "Free breakfast menu",
+                "price" => 3000,
                 "partner_id" => 3,
-                "image" => ""
+                "image" => "images/sparlogo.png"
             ]
         ]);
     }

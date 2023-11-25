@@ -8,6 +8,8 @@
     integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
     crossorigin="anonymous"></script>
 <script src="semantic.js"></script>
+<div class="ui center aligned text container raised">
+
 <div class="ui blue inverted  labeled icon menu">
     <div class="header item">
         <a href="/transactions">
@@ -22,16 +24,16 @@
         <i class="user icon"></i>
         Profile
     </a>
-    <a class="item <?=str_contains(Route::current()->uri, "items") ? 'active' : ''?>" href="/items">
+    <a class="item <?=Route::current()->uri == "items" ? 'active' : ''?>" href="/items">
         <i class="gift icon"></i>
-        Items
+        Rewards
     </a>
     <a class="item <?=str_contains(Route::current()->uri, "useritems") ? 'active' : ''?>" href="/useritems">
-        <i class="gift icon"></i>
-        My Items
+        <i class="box icon"></i>
+        My rewards
     </a>
     <div class="right menu">
-        <i class="item">Balance: <br/>        <i class="money icon"></i> {{User::findOrFail(1)->balance}} </i>
+        <i class="item"><i class="money icon"></i> Balance: {{User::findOrFail(1)->balance}} </i>
         <a class="item">
             <i class="sign-out icon"></i>
             Log out
@@ -39,10 +41,4 @@
         </a>
     </div>
 </div>
-<style>
-    .label {
-        width: 150px !important;
-    }
-</style>
 
-<div class="ui center aligned text container raised">

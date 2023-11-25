@@ -18,7 +18,6 @@ class DatabaseSeeder extends Seeder
             PartnerSeeder::class,
             TransactionSeeder::class,
             UserItemSeeder::class,
-            UserSeeder::class,
             FriendSeeder::class,
         ]);
 
