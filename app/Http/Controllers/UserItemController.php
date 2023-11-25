@@ -39,7 +39,7 @@ class UserItemController extends Controller
         $user->balance -= $item->price;
         $user->save();
 
-        return redirect()->back()->with('message', 'You successfully buyed the item!');
+        return redirect()->back()->with('message', 'You successfully bought the item!');
     }
 
     /**
