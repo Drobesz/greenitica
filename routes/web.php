@@ -2,6 +2,9 @@
 
 use App\Http\Controllers\TransactionController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\ItemController;
+use App\Http\Controllers\PartnerController;
+use App\Http\Controllers\UserItemController;
 use Illuminate\Support\Facades\Route;
 
 /*
