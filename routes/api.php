@@ -21,4 +21,3 @@ use Illuminate\Support\Facades\Route;
 Route::apiResource('partners', PartnerController::class);
 Route::apiResource('transactions', TransactionController::class);
 Route::apiResource('items', ItemController::class);
-Route::apiResource('users', UserController::class);
