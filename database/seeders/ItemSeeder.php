@@ -33,7 +33,7 @@ class ItemSeeder extends Seeder
                 "name" => "No account management fee for 6 months",
                 "partner_id" => 5,
                 "price" => 20000,
-                "image" => ""
+                "image" => "images/granitlogo.jpg"
             ],
             [
                 "id" => 4,
@@ -48,6 +48,13 @@ class ItemSeeder extends Seeder
                 "price" => 3000,
                 "partner_id" => 3,
                 "image" => "images/sparlogo.png"
+            ],
+            [
+                "id" => 6,
+                "name" => "Free Euro account",
+                "price" => 5000,
+                "partner_id" => 3,
+                "image" => "images/granitlogo.jpg"
             ]
         ]);
     }

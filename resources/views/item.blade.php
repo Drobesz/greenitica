@@ -1,12 +1,4 @@
 @include('header')
-<script>
-    $(document).ready(function () {
-        $('.special.cards .image').dimmer({
-            on: 'hover'
-        });
-
-    });
-</script>
 @if(session()->has('message'))
     <div class="ui success message">
         {{ session()->get('message') }}
@@ -17,7 +9,7 @@
     @foreach($items as $item)
         <div class="card">
             <div class="blurring dimmable image">
-                <div class="ui dimmer">
+                <div class="ui">
                     <div class="content">
 
                     </div>
