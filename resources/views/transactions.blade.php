@@ -10,7 +10,7 @@
                 label: 'Carbon points',
                 data: [@foreach ($transactions as $transaction) {{$transaction->carbon_token}},@endforeach],
                 fill: false,
-                borderColor: 'rgb(75, 192, 192)',
+                borderColor: '#2185D0',
                 tension: 0.1
             }]
         };
@@ -23,7 +23,7 @@
             options: {
                 scales: {
                     y: {
-                        beginAtZero: true
+                        beginAtZero: false
                     }
                 }
             }
