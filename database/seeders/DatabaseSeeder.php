@@ -19,6 +19,7 @@ class DatabaseSeeder extends Seeder
             TransactionSeeder::class,
             UserItemSeeder::class,
             UserSeeder::class,
+            FriendSeeder::class,
         ]);
 
     }

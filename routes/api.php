@@ -1,9 +1,9 @@
 <?php
 
-use App\Mocks\Users;
-use App\Models\Item;
-use App\Models\Partner;
-use Illuminate\Support\Facades\Date;
+use App\Http\Controllers\ItemController;
+use App\Http\Controllers\PartnerController;
+use App\Http\Controllers\TransactionController;
+use App\Http\Controllers\UserItemController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,29 +17,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('partners', function() {
-    return Partner::all();
-});
-
-Route::get('users', function() {
-    return Users::get();
-});
-
-Route::get('items', function() {
-    return Item::all();
-});
-
-Route::get('transactions', function() {
-    return
-        [
-            [
-                'id' => 1,
-                'user_id' => 1,
-                'partner_id' => 1,
-                'amount' => 30000,
-                'category' => 'Transportation',
-                'date' => Date::Now(),
-                'carbon_token' => 1500,
-            ],
-        ];
-});
+Route::apiResource('partners', PartnerController::class);
+Route::apiResource('transactions', TransactionController::class);
+Route::apiResource('items', ItemController::class);
+Route::apiResource('useritems', UserItemController::class);
