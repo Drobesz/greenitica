@@ -21,7 +21,7 @@
         Items
     </a>
     <div class="right menu">
-        <i class="item">Balance: <br/> kreditszámot ide pls</i>
+        <i class="item">Balance: <br/>        <i class="money icon"></i> </i>
         <a class="item">
             <i class="sign-out icon"></i>
             Log out
