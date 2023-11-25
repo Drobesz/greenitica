@@ -13,16 +13,12 @@
 <div class="ui blue inverted  labeled icon menu">
     <div class="header item">
         <a href="/transactions">
-            <img class="ui image" src="images/logo.jpg" width="64">
+            <img class="ui image" src="images/logo_feher.png" width="64">
         </a>
     </div>
     <a class="item <?=str_contains(Route::current()->uri, "transactions") ? 'active' : ''?>" href="/transactions">
         <i class="list icon "></i>
         Transactions
-    </a>
-    <a class="item <?=str_contains(Route::current()->uri, "profile") ? 'active' : ''?>" href="/profile">
-        <i class="user icon"></i>
-        Profile
     </a>
     <a class="item <?=Route::current()->uri == "items" ? 'active' : ''?>" href="/items">
         <i class="gift icon"></i>
@@ -32,6 +28,11 @@
         <i class="box icon"></i>
         My rewards
     </a>
+    <a class="item <?=str_contains(Route::current()->uri, "profile") ? 'active' : ''?>" href="/profile">
+        <i class="user icon"></i>
+        Profile
+    </a>
+
     <div class="right menu">
         <i class="item"><i class="money icon"></i> Balance: {{User::findOrFail(1)->balance}} </i>
         <a class="item">

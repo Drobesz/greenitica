@@ -31,7 +31,14 @@
 
     });
 </script>
-
+<h3>My transactions</h3>
+<p>
+    Here you can see you transactions.
+</p>
+<p>
+    Every purchase you make with your Credit Card, it gives you <strong>carbon credits</strong>.
+    This is different in every company, they give you varying percentages per purchase.
+</p>
 <canvas id="chartdiv">
 
 

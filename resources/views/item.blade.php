@@ -1,4 +1,6 @@
 @include('header')
+<h3>Buy-able rewards</h3>
+
 @if(session()->has('message'))
     <div class="ui success message">
         {{ session()->get('message') }}
