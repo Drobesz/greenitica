@@ -21,6 +21,10 @@
         <i class="gift icon"></i>
         Items
     </a>
+    <a class="item <?=str_contains(Route::current()->uri, "useritems") ? 'active' : ''?>" href="/useritems">
+        <i class="gift icon"></i>
+        My Items
+    </a>
     <div class="right menu">
         <i class="item">Balance: <br/>        <i class="money icon"></i> </i>
         <a class="item">
@@ -33,7 +37,7 @@
 <style>
     .label {
         width: 150px !important;
-    }    
+    }
 </style>
 
 <div class="ui center aligned text container raised">
