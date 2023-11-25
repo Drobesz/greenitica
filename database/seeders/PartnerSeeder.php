@@ -43,6 +43,13 @@ class PartnerSeeder extends Seeder
                     'percentage' => 0.04,
                     'image' => ''
                 ],
+                [
+                    'id' => 5,
+                    'name' => 'TRINARG',
+                    'is_elevated' => false,
+                    'percentage' => 0.04,
+                    'image' => ''
+                ],
             ]
         );
     }

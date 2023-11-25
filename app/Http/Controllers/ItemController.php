@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Item;
+use App\Models\Transaction;
 use Illuminate\Database\Eloquent\Collection;
 
 class ItemController extends Controller
@@ -10,9 +11,12 @@ class ItemController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index(): Collection
+    public function index()
     {
-        return Item::all();
+        return view(
+            'item',
+            ['items' => Item::with('partner')->get()]
+        );
     }
 
     /**
