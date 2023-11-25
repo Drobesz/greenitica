@@ -1,10 +1,4 @@
 @include('header')
-<style>
-    .label {
-        width: 150px !important;
-    }
-</style>
-
 <h3>Here are your rewards!</h3>
 <script>
     $(document).ready(function () {
@@ -14,6 +8,8 @@
         });
     });
 </script>
+
+<script type="text/javascript" src="qrcode.min.js"></script>
 
 @if (count($userItems) <= 0)
     <div class="ui icon message">
@@ -51,6 +47,10 @@
             <div class="header">Here is your code!</div>
             <div class="content">
                 Code: <b>{{$userItem->qr_code}}</b>
+                <div id="qrcode"></div>
+                <script type="text/javascript">
+                    new QRCode(document.getElementById("qrcode"), "{{$userItem->qr_code}}");
+                </script>
             </div>
             <div class="actions">
                 <button class="ui cancel button">OK</button>
