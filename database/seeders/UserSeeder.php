@@ -16,15 +16,13 @@ class UserSeeder extends Seeder
         DB::table('users')->insert(
             [
                 [
-                    'id' => 1,
                     'name' => 'Pista Nagy',
                     'balance' => 100,
                     'email' => 'nagy.pista@greenitica.local'
                 ],
                 [
-                    'id' => 2,
                     'name' => 'Agota Lakatos',
-                    'balance' => 100,
+                    'balance' => 200,
                     'email' => 'agotalakatos@greenitical.local'
                 ]
             ]
