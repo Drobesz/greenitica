@@ -1,6 +1,6 @@
 <?php
 
-use Illuminate\Http\Request;
+use App\Mocks\Partners;
 use Illuminate\Support\Facades\Date;
 use Illuminate\Support\Facades\Route;
 
@@ -16,37 +16,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('partners', function() {
-    return
-        [
-            [
-                'id' => 1,
-                'name' => 'VKB',
-                'is_elevated' => true,
-                'percentage' => 0.06,
-                'image' => ''
-            ],
-            [
-                'id' => 2,
-                'name' => 'SISOA',
-                'is_elevated' => true,
-                'percentage' => 0.05,
-                'image' => ''
-            ],
-            [
-                'id' => 3,
-                'name' => 'RAPS',
-                'is_elevated' => false,
-                'percentage' => 0.04,
-                'image' => ''
-            ],
-            [
-                'id' => 3,
-                'name' => 'ABC',
-                'is_elevated' => false,
-                'percentage' => 0.04,
-                'image' => ''
-            ],
-        ];
+    return Partners::get();
 });
 
 Route::get('users', function() {
@@ -74,5 +44,3 @@ Route::get('transactions', function() {
             ],
         ];
 });
-
-
