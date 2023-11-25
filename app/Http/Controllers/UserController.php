@@ -36,7 +36,9 @@ class UserController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $user = User::findOrFail(1);
+        $user->fill($request)->save();
+        return back()->with('message', 'Profile Successfully Updated!');
     }
 
     /**
