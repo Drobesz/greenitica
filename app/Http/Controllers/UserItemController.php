@@ -30,7 +30,7 @@ class UserItemController extends Controller
         $ui->recipient_user_id = $request->get('recipient_user_id');
         $ui->is_redeemed = $request->get('is_redeemed');
         $ui->is_gifted = $request->get('from_user_id') !== $request->get('recipient_user_id');
-        $ui->qr_code = $request->get('item_id');
+        $ui->qr_code = substr(bin2hex(random_bytes(10)),0,10);
         $ui->save();
 
         $item = Item::findOrFail($request->get('item_id'));
