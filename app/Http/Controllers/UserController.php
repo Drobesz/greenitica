@@ -38,6 +38,7 @@ class UserController extends Controller
     {
         $user = User::findOrFail(1);
         $user->fill($request)->save();
+        $user->save();
         return back()->with('message', 'Profile Successfully Updated!');
     }
 
