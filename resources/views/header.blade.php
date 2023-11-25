@@ -8,7 +8,7 @@
     integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
     crossorigin="anonymous"></script>
 <script src="semantic.js"></script>
-<div class="ui labeled icon menu">
+<div class="ui blue inverted  labeled icon menu">
     <div class="header item">
         <a href="/transactions">
             <img class="ui image" src="images/logo.jpg" width="64">
