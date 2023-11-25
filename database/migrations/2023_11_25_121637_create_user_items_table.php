@@ -13,7 +13,10 @@ return new class extends Migration
     {
         Schema::create('user_items', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+            $table->foreignId('user_id');
+            $table->foreignId('item_id');
+            $table->boolean('is_bought');
+            $table->text('qr_code');
         });
     }
 

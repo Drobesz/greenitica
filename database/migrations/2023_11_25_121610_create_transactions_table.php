@@ -13,7 +13,12 @@ return new class extends Migration
     {
         Schema::create('transactions', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+            $table->foreignId('user_id');
+            $table->foreignId('partner_id');
+            $table->integer('amount');
+            $table->string('category');
+            $table->dateTime('date');
+            $table->integer('carbon_token');
         });
     }
 
