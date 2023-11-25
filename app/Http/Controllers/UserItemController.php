@@ -12,7 +12,7 @@ class UserItemController extends Controller
      */
     public function index()
     {
-        //
+        return UserItem::with(['item', 'fromuser','recipientuser'])->get();
     }
 
     /**

@@ -13,9 +13,11 @@ return new class extends Migration
     {
         Schema::create('user_items', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_id');
+            $table->foreignId('from_user_id');
+            $table->foreignId('recipient_user_id');
             $table->foreignId('item_id');
-            $table->boolean('is_bought');
+            $table->boolean('is_redeemed');
+            $table->boolean('is_gifted');
             $table->text('qr_code');
         });
     }
