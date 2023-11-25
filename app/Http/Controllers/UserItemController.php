@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Item;
+use App\Models\User;
 use App\Models\UserItem;
 use Illuminate\Http\Request;
 
@@ -18,9 +20,24 @@ class UserItemController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(UserItem $userItem)
+    public function store(Request $request)
     {
-        //
+        $ui = new UserItem();
+        $ui->item_id = $request->get('item_id');
+        $ui->from_user_id = $request->get('from_user_id');
+        $ui->recipient_user_id = $request->get('recipient_user_id');
+        $ui->is_redeemed = $request->get('is_redeemed');
+        $ui->is_gifted = $request->get('from_user_id') !== $request->get('recipient_user_id');
+        $ui->qr_code = $request->get('item_id');
+        $ui->save();
+
+        $item = Item::findOrFail($request->get('item_id'));
+
+        $user = User::findOrFail(1);
+        $user->balance -= $item->price;
+        $user->save();
+
+        return redirect()->back()->with('message', 'You successfully buyed the item!');
     }
 
     /**

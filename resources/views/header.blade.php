@@ -31,4 +31,4 @@
 </div>
 
 
-<div class="ui raised very padded text container segment">
+<div class="ui center aligned text container raised">

@@ -19,6 +19,8 @@ return new class extends Migration
             $table->boolean('is_redeemed');
             $table->boolean('is_gifted');
             $table->text('qr_code');
+            $table->datetimes();
+
         });
     }
 

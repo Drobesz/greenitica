@@ -7,6 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class UserItem extends Model
 {
+    public $timestamps = false;
+
     public function item()
     {
         return $this->belongsTo(Item::class);

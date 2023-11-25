@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->foreignId('user_id_1');
             $table->foreignId('user_id_2');
+            $table->datetimes();
         });
     }
 

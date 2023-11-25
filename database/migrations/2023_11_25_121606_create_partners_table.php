@@ -17,6 +17,7 @@ return new class extends Migration
             $table->boolean('is_elevated');
             $table->double('percentage');
             $table->string('image');
+            $table->datetimes();
 
         });
     }

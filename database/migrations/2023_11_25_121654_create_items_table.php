@@ -14,6 +14,8 @@ return new class extends Migration
             $table->integer('price');
             $table->string('image');
             $table->foreignId('partner_id');
+            $table->datetimes();
+
         });
 
     }

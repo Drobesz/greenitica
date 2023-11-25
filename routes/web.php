@@ -21,3 +21,4 @@ use Illuminate\Support\Facades\Route;
 Route::get('transactions', [TransactionController::class, 'index']);
 Route::get('profile', [UserController::class, 'index']);
 Route::get('items', [ItemController::class, 'index']);
+Route::Resource('useritems', UserItemController::class);
