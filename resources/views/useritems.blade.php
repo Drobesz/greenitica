@@ -47,7 +47,7 @@
             <div class="header">Here is your code!</div>
             <div class="content">
                 Code: <b>{{$userItem->qr_code}}</b>
-                <div id="qrcod{{$userItem->id}}e"></div>
+                <div id="qrcode{{$userItem->id}}"></div>
                 <script type="text/javascript">
                     new QRCode(document.getElementById("qrcode{{$userItem->id}}"), "{{$userItem->qr_code}}");
                 </script>
