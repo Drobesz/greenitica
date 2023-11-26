@@ -1,1 +1,3 @@
-# greenitica
+# Greenitica
+
+## How to run?
