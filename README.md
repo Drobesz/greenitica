@@ -19,9 +19,9 @@ Our solution is a demo for a Loyalty Program application built in Laravel.
 ### Ubuntu requirements
 
 1. Install PHP >= 8.1: https://linuxize.com/post/how-to-install-php-8-on-ubuntu-20-04/
-2Install other PHP extensions: `sudo apt install php8 php8-sqlite3 php8-xml`
-3Install Composer: `https://getcomposer.org/download/`
-4Install other tools: `sudo apt install make vim `
+2. Install other PHP extensions: `sudo apt install php8 php8-sqlite3 php8-xml`
+3. Install Composer: `https://getcomposer.org/download/`
+4. Install other tools: `sudo apt install make vim `
 
 ## Requirements
 
